@@ -1,8 +1,7 @@
-console.log(`NODE_ENV  je ${process.env.NODE_ENV}`);
-console.log(process.env.NODE_ENV === 'production');
-
 if(process.env.NODE_ENV === 'production'){
+	console.log('Adding ./prod keys');
 	module.exports = require('./prod');
 }else{
+	console.log('Adding ./dev keys');
 	module.exports = require('./dev');
 }
